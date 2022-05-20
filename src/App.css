@@ -29,13 +29,14 @@
 }
 
 .list{
-  height:50px;
+  height:26px;
   margin-top:30px;
   overflow:hidden;
 }
 
 .list p{
   display:inline-block;
+  font-size:18px
 }
 .list button{
   float:right;
@@ -54,4 +55,5 @@
 }
 .plus button{
   border:none;
+  margin-left:15px;
 }
