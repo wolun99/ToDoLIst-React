@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Plus from './Plus'
 import Posts from './Post.js'
 
 function App() {
-  let [post,setPost]=useState([])
+  let [post,setPost]=useState(()=> JSON.parse(window.localStorage.getItem("post")))
   let [item,setItem]=useState('')
+
+  useEffect(()=>{
+    window.localStorage.setItem("post",JSON.stringify(post));
+  },[post])
 
   return (
     <>

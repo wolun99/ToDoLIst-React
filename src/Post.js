@@ -14,7 +14,7 @@ function Posts(props){
   <h3>{year}년 {month +1}월 {days}일</h3>
   <h4>{week[day-1]}</h4>
   {
-    props.post ? props.post.map(
+    props.post.map(
       function(p,i){
         return(
           <div className='list' key={i}>
@@ -26,7 +26,7 @@ function Posts(props){
             }}>delete</button>
           </div>
           )
-    }) : null
+    })
   }
   <Plus item={props.item} setItem={props.setItem} post={props.post} setPost={props.setPost}></Plus>
   </div>
